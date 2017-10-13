@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <job id="xsheet">
+    <?job error="true" debug="false"?>
+    <runtime>
+      <description>エクセルのシート名を列挙します。SEPARATORが空の場合タブ区切り[tsv形式]で出力します。</description>
+      <named name="filename" helpstring="エクセルファイルのパス" type="string" required="true" />
+      <example>example: cscript //nologo //job::xsheet run.wsf /filename:c:\example.xlsx > name.tsv</example>
+    </runtime>
+    <object id="ExcelApp" progid="Excel.Application" />
+    <resource id="SEPARATOR"></resource>
+    <script language="JScript" src="ExcelSheetNameBot.js" />
+  </job>
+</package>
